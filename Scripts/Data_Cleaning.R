@@ -19,7 +19,9 @@ library('naniar')
 
 #set the directory where all your files are located.
 setwd("/scratch/grp/msc_appbio/DCDM/Group11/data")
-qc_dir <- "/scratch/grp/msc_appbio/DCDM/Group11/data/rawcsv_files/QC"
+qc_dir <- "/scratch/grp/msc_appbio/DCDM/Group11/data/QC"
+# Create the full directory path, including any missing parent folders.
+# Set recursive = TRUE to allow automatic creation of nested folders.
 dir.create(qc_dir, showWarnings = FALSE, recursive = TRUE)
 
 # Load all data files
@@ -36,12 +38,12 @@ for (i in seq(1, length(file_list), by = batch_size)) {
   batch_data <- map_df(batch_files, function(file) {
     raw <- read.csv(file, header = FALSE, stringsAsFactors = FALSE)
     transposed <- as.data.frame(t(raw), stringsAsFactors = FALSE)
-    colnames(transposed) <- raw[[1]]
+    colnames(transposed) <- tolower(raw[[1]]) # Convert column names to lowercase
     transposed[-1, ]
   })
   
   #Load the SOP from your working directory.
-  sop <- read.csv("../IMPC_SOP.csv", header = TRUE)
+  sop <- read.csv("IMPC_SOP.csv", header = TRUE)
   
   #Set up the QC workflow function, which takes two inputs: data and SOP table
   apply_metadata_qc <- function(data, sop) {  
@@ -124,14 +126,14 @@ write.csv(qc_result, file.path(qc_dir, paste0("qc_result_batch_", i, ".csv")), r
 final_qc <- bind_rows(all_qc)
 write.csv(final_qc, file.path(qc_dir, "qc_result_all.csv"), row.names = FALSE)
 
-qc <- read.csv("/scratch/grp/msc_appbio/DCDM/Group11/data/rawcsv_files/QC/cleaned_qc_result.csv")
+qc <- read.csv("/scratch/grp/msc_appbio/DCDM/Group11/data/QC/qc_result_all.csv")
 head(qc)
 
 # to visualise the missing value
-setwd("/scratch/grp/msc_appbio/DCDM/Group11/data/rawcsv_files/QC")
-ex2File=read.table("rawExperimentData2.csv",sep =",",header=T)
-ex2File_trimmed <- ex2File[, 1:8]
-gg_miss_var(ex2File_trimmed)
+setwd("/scratch/grp/msc_appbio/DCDM/Group11/data/QC")
+qc=read.table("qc_result_all.csv",sep =",",header=T)
+qc_trimmed <- qc[, 1:8]
+gg_miss_var(qc_trimmed)
 missmap(ex2File_trimmed, main = "Missing Values", col = c("pink", "snow2"))
 
 
