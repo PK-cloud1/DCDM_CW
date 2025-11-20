@@ -23,7 +23,7 @@
 ├── Visualisation/
 └── Data/
 ```
-### [Data Cleaning](./Data%20Cleaning)
+### [Data Cleaning](./Scripts)
 * Software used: R and Python  
 * The 'Scripts' folder contains code for data cleaning and organisation.  
 * The 'Data' folder contains the cleaned raw datasets.  
