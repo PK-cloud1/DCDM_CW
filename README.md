@@ -16,12 +16,10 @@
 
 ### Project Structure
 ```text
-├── Data Cleaning/
-│   ├── Scripts/
-│   └── Data/
-├── Database/
-├── Visualisation/
-└── Data/
+- Data
+- Data Cleaning
+- Database
+- Visualisation
 ```
 ### [Data Cleaning](./Scripts)
 * Software used: R and Python  
