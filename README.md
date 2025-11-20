@@ -21,7 +21,7 @@
 - Database
 - Visualisation
 ```
-### [Data Cleaning](./Scripts)
+### [Data Cleaning](./Data_Cleaning)
 * Software used: R and Python  
 * The 'Scripts' folder contains code for data cleaning and organisation.  
 * The 'Data' folder contains the cleaned raw datasets.  
@@ -34,7 +34,7 @@
 * Software used: R (R Shiny)  
 * Three interactive visualisations were developed in response to collaborator requests.  
 
-### [Supporting Data](./Data)
+### [Supporting Data](./data)
 * **IMPC_parameter_description.csv** – metadata about the experimental parameters used in IMPC studies.  
 * **Disease_information.csv** – mappings between phenotypic traits and known human diseases.  
 * **IMPC_procedure.csv** – documentation of the experimental procedures carried out in IMPC pipelines.
