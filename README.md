@@ -42,5 +42,9 @@
 * **IMPC_procedure.csv** – documentation of the experimental procedures carried out in IMPC pipelines.
 
 
-### Contributors
-* 
+#### Contributors
+* Samara Banday
+* Chia-Yu (Samantha) Tu
+* Radhika Shaunak
+* Phoebe Kusi-Yeboah
+* Michael Tuft
