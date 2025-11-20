@@ -1,0 +1,21 @@
+#txt_to_csv
+#!/bin/bash
+
+# Directory for .txt files
+SOURCE_DIR="/scratch/grp/msc_appbio/DCDM/egressed_data/group11_egressed/Group11"
+# Destination directory
+DEST_DIR="gh repo clone mtuft/Group11"
+
+mkdir -p "$DEST_DIR"
+
+echo "Converting .txt files to .csv..."
+
+for file in "$SOURCE_DIR"/*.txt; do
+    filename=$(basename "$file" .txt)
+    # Replace tabs or multiple spaces with commas
+    sed -e 's/\t/,/g' -e 's/  */,/g' "$file" > "$DEST_DIR/${filename}.csv"
+    echo "Converted $filename.txt to $filename.csv"
+done
+
+echo "All conversions complete."
+
