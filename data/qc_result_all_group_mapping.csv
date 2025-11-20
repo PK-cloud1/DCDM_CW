@@ -1,0 +1,327 @@
+parameter_id,param_prefix,code3,group_from_prefix,group_from_code3,group_from_name,final_group
+CCP_LFO_001_001,CCP_LFO,NA,Growth/Weight,NA,NA,Growth/Weight
+CCP_XRY_031_001,CCP_XRY,NA,Skeletal/X-ray,NA,NA,Skeletal/X-ray
+CCP_XRY_058_001,CCP_XRY,NA,Skeletal/X-ray,NA,NA,Skeletal/X-ray
+ESLIM_005_001_701,ESLIM_005,NA,Growth/Body composition,NA,NA,Growth/Body composition
+ESLIM_009_001_704,ESLIM_009,NA,Neuromuscular/Grip strength,NA,NA,Neuromuscular/Grip strength
+ESLIM_012_001_001,ESLIM_012,NA,Behavior/Neuro,NA,NA,Behavior/Neuro
+ESLIM_015_001_012,ESLIM_015,NA,Metabolic/Enzyme,NA,NA,Metabolic/Enzyme
+ESLIM_016_001_005,ESLIM_016,NA,Hematology/Erythrocyte,NA,NA,Hematology/Erythrocyte
+ESLIM_016_001_007,ESLIM_016,NA,Hematology/Erythrocyte,NA,NA,Hematology/Erythrocyte
+ESLIM_021_001_002,ESLIM_021,NA,Metabolic/Lipid,NA,NA,Metabolic/Lipid
+ESLIM_021_001_003,ESLIM_021,NA,Metabolic/Lipid,NA,NA,Metabolic/Lipid
+ESLIM_021_001_005,ESLIM_021,NA,Metabolic/Lipid,NA,NA,Metabolic/Lipid
+ESLIM_022_001_001,ESLIM_022,NA,Growth/Body composition,NA,NA,Growth/Body composition
+HRWLLA_GRS_011_001,HRWLLA_GRS,NA,Neuromuscular/Grip strength,NA,NA,Neuromuscular/Grip strength
+ICS_FEA_019_001,ICS_FEA,NA,Behavior/Fear conditioning,NA,NA,Behavior/Fear conditioning
+IMPC_ABR_002_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+IMPC_ABR_004_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+IMPC_ABR_006_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+IMPC_ABR_008_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+IMPC_ABR_010_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+IMPC_ABR_012_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+IMPC_ACS_006_001,IMPC_ACS,ACS,NA,Behavior/Neuro,NA,Behavior/Neuro
+IMPC_ACS_033_001,IMPC_ACS,ACS,NA,Behavior/Neuro,NA,Behavior/Neuro
+IMPC_ACS_035_001,IMPC_ACS,ACS,NA,Behavior/Neuro,NA,Behavior/Neuro
+IMPC_CBC_001_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_003_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_004_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_005_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_006_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_007_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_008_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_009_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_011_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_012_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_014_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_015_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_016_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_017_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_018_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_020_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_023_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CBC_058_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+IMPC_CSD_007_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_011_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_012_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_013_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_016_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_024_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_027_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_028_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_030_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_032_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_036_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_038_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_039_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_CSD_080_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+IMPC_DXA_002_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_003_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_004_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_005_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_006_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_007_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_008_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_009_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_DXA_010_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+IMPC_ECH_007_001,IMPC_ECH,ECH,NA,Cardio/Echo,NA,Cardio/Echo
+IMPC_ECH_012_001,IMPC_ECH,ECH,NA,Cardio/Echo,NA,Cardio/Echo
+IMPC_EYE_007_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_008_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_016_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_017_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_024_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_025_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_026_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_027_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_062_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_064_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_067_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_068_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_083_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_092_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_EYE_092_002,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+IMPC_FEA_105_001,IMPC_FEA,FEA,NA,Behavior/Fear conditioning,NA,Behavior/Fear conditioning
+IMPC_FOR_001_001,IMPC_FOR,FOR,NA,Behavior/Neuro,NA,Behavior/Neuro
+IMPC_GEL_056_001,IMPC_GEL,GEL,NA,Embryo/Imaging,NA,Embryo/Imaging
+IMPC_GEL_058_001,IMPC_GEL,GEL,NA,Embryo/Imaging,NA,Embryo/Imaging
+IMPC_GEL_064_001,IMPC_GEL,GEL,NA,Embryo/Imaging,NA,Embryo/Imaging
+IMPC_GEO_009_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_011_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_017_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_041_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_043_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_048_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_063_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_064_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEO_069_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+IMPC_GEP_029_002,IMPC_GEP,GEP,NA,Gene expression/Pathology,NA,Gene expression/Pathology
+IMPC_GPO_002_001,IMPC_GPO,GPO,NA,Gross pathology/Organ,NA,Gross pathology/Organ
+IMPC_GRS_008_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+IMPC_GRS_009_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+IMPC_GRS_010_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+IMPC_GRS_011_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+IMPC_HEM_001_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_002_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_003_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_004_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_005_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_006_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_007_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_008_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_019_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_027_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_029_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_031_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_032_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_035_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_036_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_037_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HEM_038_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+IMPC_HWT_002_001,IMPC_HWT,HWT,NA,Growth/Weight,NA,Growth/Weight
+IMPC_HWT_008_001,IMPC_HWT,HWT,NA,Growth/Weight,NA,Growth/Weight
+IMPC_IMM_005_002,IMPC_IMM,IMM,NA,Immunology,NA,Immunology
+IMPC_IPG_010_001,IMPC_IPG,IPG,NA,Metabolic/Glucose tolerance,NA,Metabolic/Glucose tolerance
+IMPC_IPG_011_001,IMPC_IPG,IPG,NA,Metabolic/Glucose tolerance,NA,Metabolic/Glucose tolerance
+IMPC_LDT_007_001,IMPC_LDT,LDT,NA,Behavior/Anxiety (Light–Dark),NA,Behavior/Anxiety (Light–Dark)
+IMPC_LDT_008_001,IMPC_LDT,LDT,NA,Behavior/Anxiety (Light–Dark),NA,Behavior/Anxiety (Light–Dark)
+IMPC_OFD_007_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_009_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_010_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_012_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_013_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_014_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_016_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_017_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_019_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_020_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_OFD_022_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+IMPC_XRY_001_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+IMPC_XRY_003_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+IMPC_XRY_005_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+IMPC_XRY_019_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+IMPC_XRY_033_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+JAX_LDT_001_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+JAX_LDT_002_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+JAX_LDT_003_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+JAX_LDT_004_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+JAX_LDT_006_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+JAX_LDT_008_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+JAX_LDT_009_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+JAX_OFD_007_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_009_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_010_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_011_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_012_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_013_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_014_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_016_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_017_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_020_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_OFD_022_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+JAX_SLW_014_001,JAX_SLW,NA,Behavior/Sleep,NA,NA,Behavior/Sleep
+KMPCLA_CSD_012_001,KMPCLA_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+KMPCLA_HEM_019_001,KMPCLA_HEM,NA,Hematology,NA,NA,Hematology
+KMPCLA_OFD_007_001,KMPCLA_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+KMPCLA_OFD_009_001,KMPCLA_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+KMPCLA_OFD_020_001,KMPCLA_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+M-G-P_005_001_004,M-G-P_005,NA,Skeletal/Bone,NA,NA,Skeletal/Bone
+M-G-P_013_001_001,M-G-P_013,NA,Eye/Vision,NA,NA,Eye/Vision
+M-G-P_013_001_003,M-G-P_013,NA,Eye/Vision,NA,NA,Eye/Vision
+M-G-P_013_001_004,M-G-P_013,NA,Eye/Vision,NA,NA,Eye/Vision
+M-G-P_013_001_007,M-G-P_013,NA,Eye/Vision,NA,NA,Eye/Vision
+M-G-P_013_001_008,M-G-P_013,NA,Eye/Vision,NA,NA,Eye/Vision
+M-G-P_016_001_008,M-G-P_016,NA,Hematology/Platelets,NA,NA,Hematology/Platelets
+MGP_CSD_008_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+MGP_CSD_026_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+MGP_CSD_027_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+MGP_CSD_066_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+MGP_CSD_067_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+MGP_CSD_074_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+MGP_PBI_008_001,MGP_PBI,NA,Behavior/Pre-pulse inhibition,NA,NA,Behavior/Pre-pulse inhibition
+RBRCLA_HEM_002_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+RBRCLA_HEM_005_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+RBRCLA_HEM_006_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+RBRCLA_HEM_007_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+RBRCLA_HEM_027_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+UCDLA_IPG_011_001,UCDLA_IPG,NA,Metabolic/Glucose tolerance,NA,NA,Metabolic/Glucose tolerance
+ccp_lfo_001_001,CCP_LFO,NA,Growth/Weight,NA,NA,Growth/Weight
+ccp_xry_031_001,CCP_XRY,NA,Skeletal/X-ray,NA,NA,Skeletal/X-ray
+ccp_xry_058_001,CCP_XRY,NA,Skeletal/X-ray,NA,NA,Skeletal/X-ray
+eslim_005_001_701,ESLIM_005,NA,Growth/Body composition,NA,NA,Growth/Body composition
+eslim_009_001_704,ESLIM_009,NA,Neuromuscular/Grip strength,NA,NA,Neuromuscular/Grip strength
+eslim_015_001_012,ESLIM_015,NA,Metabolic/Enzyme,NA,NA,Metabolic/Enzyme
+eslim_016_001_007,ESLIM_016,NA,Hematology/Erythrocyte,NA,NA,Hematology/Erythrocyte
+eslim_021_001_002,ESLIM_021,NA,Metabolic/Lipid,NA,NA,Metabolic/Lipid
+eslim_021_001_003,ESLIM_021,NA,Metabolic/Lipid,NA,NA,Metabolic/Lipid
+eslim_021_001_005,ESLIM_021,NA,Metabolic/Lipid,NA,NA,Metabolic/Lipid
+eslim_022_001_001,ESLIM_022,NA,Growth/Body composition,NA,NA,Growth/Body composition
+hrwlla_grs_011_001,HRWLLA_GRS,NA,Neuromuscular/Grip strength,NA,NA,Neuromuscular/Grip strength
+ics_fea_019_001,ICS_FEA,NA,Behavior/Fear conditioning,NA,NA,Behavior/Fear conditioning
+impc_abr_002_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+impc_abr_004_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+impc_abr_008_001,IMPC_ABR,ABR,NA,Hearing/Auditory,NA,Hearing/Auditory
+impc_acs_006_001,IMPC_ACS,ACS,NA,Behavior/Neuro,NA,Behavior/Neuro
+impc_acs_033_001,IMPC_ACS,ACS,NA,Behavior/Neuro,NA,Behavior/Neuro
+impc_acs_035_001,IMPC_ACS,ACS,NA,Behavior/Neuro,NA,Behavior/Neuro
+impc_cbc_003_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_004_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_005_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_007_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_008_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_012_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_014_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_015_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_016_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_017_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_018_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_020_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_cbc_023_001,IMPC_CBC,CBC,NA,Hematology,NA,Hematology
+impc_csd_011_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_012_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_024_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_027_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_028_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_030_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_036_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_038_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_csd_080_001,IMPC_CSD,CSD,NA,Behavior/Startle,NA,Behavior/Startle
+impc_dxa_003_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+impc_dxa_004_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+impc_dxa_006_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+impc_dxa_007_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+impc_dxa_008_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+impc_dxa_009_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+impc_dxa_010_001,IMPC_DXA,DXA,NA,Growth/Body composition,NA,Growth/Body composition
+impc_ech_007_001,IMPC_ECH,ECH,NA,Cardio/Echo,NA,Cardio/Echo
+impc_ech_012_001,IMPC_ECH,ECH,NA,Cardio/Echo,NA,Cardio/Echo
+impc_eye_016_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_017_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_024_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_025_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_026_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_062_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_064_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_067_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_068_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_083_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_eye_092_001,IMPC_EYE,EYE,NA,Eye/Vision,NA,Eye/Vision
+impc_fea_105_001,IMPC_FEA,FEA,NA,Behavior/Fear conditioning,NA,Behavior/Fear conditioning
+impc_gel_056_001,IMPC_GEL,GEL,NA,Embryo/Imaging,NA,Embryo/Imaging
+impc_gel_058_001,IMPC_GEL,GEL,NA,Embryo/Imaging,NA,Embryo/Imaging
+impc_gel_064_001,IMPC_GEL,GEL,NA,Embryo/Imaging,NA,Embryo/Imaging
+impc_geo_011_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_geo_017_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_geo_041_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_geo_043_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_geo_048_002,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_geo_063_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_geo_064_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_geo_069_001,IMPC_GEO,GEO,NA,Gross morphology,NA,Gross morphology
+impc_gep_029_002,IMPC_GEP,GEP,NA,Gene expression/Pathology,NA,Gene expression/Pathology
+impc_grs_008_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+impc_grs_009_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+impc_grs_010_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+impc_grs_011_001,IMPC_GRS,GRS,NA,Neuromuscular/Grip strength,NA,Neuromuscular/Grip strength
+impc_hem_001_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hem_002_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hem_006_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hem_008_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hem_027_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hem_029_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hem_035_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hem_037_001,IMPC_HEM,HEM,NA,Hematology,NA,Hematology
+impc_hwt_008_001,IMPC_HWT,HWT,NA,Growth/Weight,NA,Growth/Weight
+impc_ipg_010_001,IMPC_IPG,IPG,NA,Metabolic/Glucose tolerance,NA,Metabolic/Glucose tolerance
+impc_ipg_011_001,IMPC_IPG,IPG,NA,Metabolic/Glucose tolerance,NA,Metabolic/Glucose tolerance
+impc_ldt_007_001,IMPC_LDT,LDT,NA,Behavior/Anxiety (Light–Dark),NA,Behavior/Anxiety (Light–Dark)
+impc_ldt_008_001,IMPC_LDT,LDT,NA,Behavior/Anxiety (Light–Dark),NA,Behavior/Anxiety (Light–Dark)
+impc_ofd_007_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_009_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_012_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_013_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_014_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_016_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_017_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_019_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_020_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_ofd_022_001,IMPC_OFD,OFD,NA,Behavior/Open-field,NA,Behavior/Open-field
+impc_xry_001_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+impc_xry_003_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+impc_xry_005_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+impc_xry_033_001,IMPC_XRY,XRY,NA,Skeletal/X-ray,NA,Skeletal/X-ray
+jax_ldt_001_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+jax_ldt_002_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+jax_ldt_003_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+jax_ldt_004_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+jax_ldt_006_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+jax_ldt_008_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+jax_ldt_009_001,JAX_LDT,NA,Behavior/Anxiety (Light–Dark),NA,NA,Behavior/Anxiety (Light–Dark)
+jax_ofd_007_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_ofd_009_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_ofd_011_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_ofd_012_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_ofd_014_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_ofd_016_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_ofd_017_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_ofd_020_001,JAX_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+jax_slw_014_001,JAX_SLW,NA,Behavior/Sleep,NA,NA,Behavior/Sleep
+kmpcla_csd_012_001,KMPCLA_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+kmpcla_hem_019_001,KMPCLA_HEM,NA,Hematology,NA,NA,Hematology
+kmpcla_ofd_007_001,KMPCLA_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+kmpcla_ofd_020_001,KMPCLA_OFD,NA,Behavior/Open-field,NA,NA,Behavior/Open-field
+m-g-p_005_001_004,M-G-P_005,NA,Skeletal/Bone,NA,NA,Skeletal/Bone
+m-g-p_013_001_003,M-G-P_013,NA,Eye/Vision,NA,NA,Eye/Vision
+m-g-p_013_001_004,M-G-P_013,NA,Eye/Vision,NA,NA,Eye/Vision
+m-g-p_016_001_008,M-G-P_016,NA,Hematology/Platelets,NA,NA,Hematology/Platelets
+mgp_csd_008_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+mgp_csd_026_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+mgp_csd_027_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+mgp_csd_074_001,MGP_CSD,NA,Behavior/Startle,NA,NA,Behavior/Startle
+mgp_pbi_008_001,MGP_PBI,NA,Behavior/Pre-pulse inhibition,NA,NA,Behavior/Pre-pulse inhibition
+rbrcla_hem_002_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+rbrcla_hem_005_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+rbrcla_hem_006_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+rbrcla_hem_007_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+rbrcla_hem_027_001,RBRCLA_HEM,NA,Hematology,NA,NA,Hematology
+ucdla_ipg_011_001,UCDLA_IPG,NA,Metabolic/Glucose tolerance,NA,NA,Metabolic/Glucose tolerance
