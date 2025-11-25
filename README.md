@@ -26,7 +26,7 @@
 * The 'Scripts' folder contains code for data cleaning and organisation.  
 * The 'Data' folder contains the cleaned raw datasets.  
 
-### [Database Creation](./Database) 
+### [Database Creation](./database) 
 * Software used: MySQL  
 * The 'Database' folder contains MySQL scripts created for database management.  
 
