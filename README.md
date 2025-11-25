@@ -30,7 +30,7 @@
 * Software used: MySQL  
 * The 'Database' folder contains MySQL scripts created for database management.  
 
-### [Data Visualisation](./Visualisation)
+### [Data Visualisation](./Visulisation)
 * Software used: R (R Shiny)  
 * Three interactive visualisations were developed in response to collaborator requests.  
 
