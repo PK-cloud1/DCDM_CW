@@ -55,7 +55,7 @@ clean_impc_csv <- function(input_file, output_file = NULL) {
     last_idx <- length(fields)
     id_token <- fields[last_idx]
     
-    # Soft check: if last token not numeric-like, try to walk backwards to find last non-empty numeric
+   # If last token isn’t numerical, go back to the most recent numeric value
     is_num_like <- function(x) grepl("^[0-9]+$", x)
     if (!is_num_like(id_token)) {
       # find from end first numeric-like token
@@ -68,7 +68,7 @@ clean_impc_csv <- function(input_file, output_file = NULL) {
       id_token <- fields[last_idx]
     }
     
-    # 2nd last (isMandatory) should be just before ID
+    # 2nd last (isMandatory) should be before ID
     second_last_idx <- last_idx - 1
     if (second_last_idx < 2) next
     mandatory_token <- fields[second_last_idx]
