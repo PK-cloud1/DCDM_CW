@@ -187,7 +187,7 @@ clean_impc_csv <- function(input_file, output_file = NULL) {
     quote = TRUE
   )
   
-  cat("Done! Cleaned file saved to:", output_file, "\n")
+  cat("Cleaned file saved to:", output_file, "\n")
   invisible(df)
 }
 
