@@ -2,25 +2,28 @@ DROP DATABASE IF EXISTS impc_db;
 CREATE DATABASE impc_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE impc_db;
 
--- ================================================================
--- Phase 1: Create all tables (without foreign keys first)
--- ================================================================
 
--- Table 1: genes - Gene information
+#Phase 1: Create all tables (without foreign keys first) 
+
+
+
+# Table 1: genes - Gene information
+
 CREATE TABLE genes (
     gene_accession_id VARCHAR(20) PRIMARY KEY, 
     gene_symbol VARCHAR(50) NOT NULL,
     INDEX idx_gene_symbol (gene_symbol)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Table 2: parameters - Parameter information
+# Table 2: parameters - Parameter information
+
 CREATE TABLE parameters (
     parameter_id VARCHAR(30) PRIMARY KEY, 
     parameter_name VARCHAR(150) NOT NULL,
     INDEX idx_parameter_name (parameter_name)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Table 3: parameter_descriptions - Parameter descriptions
+# Table 3: parameter_descriptions - Parameter descriptions
 CREATE TABLE parameter_descriptions (
     impc_parameter_orig_id VARCHAR(30),
     name VARCHAR(255), 
@@ -30,7 +33,7 @@ CREATE TABLE parameter_descriptions (
     INDEX idx_param_id (parameter_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Table 4: procedures - Experimental procedures
+# Table 4: procedures - Experimental procedures
 CREATE TABLE procedures (
     impc_parameter_orig_id VARCHAR(30) PRIMARY KEY,
     procedure_name TEXT,
@@ -39,7 +42,7 @@ CREATE TABLE procedures (
     INDEX idx_procedure_name (procedure_name(100))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Table 5: parameter_groups - Parameter classification
+# Table 5: parameter_groups - Parameter classification
 CREATE TABLE parameter_groups (
     group_id INT AUTO_INCREMENT PRIMARY KEY, 
     group_name VARCHAR(100) NOT NULL, 
@@ -48,7 +51,7 @@ CREATE TABLE parameter_groups (
     INDEX idx_param_id (parameter_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Table 6: results - Experimental results
+# Table 6: results - Experimental results
 CREATE TABLE results (
     id INT AUTO_INCREMENT PRIMARY KEY,  
     analysis_id VARCHAR(30), 
@@ -62,7 +65,7 @@ CREATE TABLE results (
     INDEX idx_pvalue (pvalue)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Table 7: diseases - Disease information
+# Table 7: diseases - Disease information
 CREATE TABLE diseases (
     disease_id VARCHAR(50), 
     disease_name VARCHAR(255),
@@ -72,7 +75,8 @@ CREATE TABLE diseases (
     INDEX idx_disease_id (disease_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Table 8: staging_raw - Staging table for data cleaning
+# Table 8: staging_raw - Staging table for data cleaning
+
 CREATE TABLE staging_raw (
     gene_accession_id VARCHAR(30),
     gene_symbol VARCHAR(50),
@@ -92,14 +96,15 @@ CREATE TABLE staging_raw (
     pvalue_status VARCHAR(10)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- ================================================================
--- Phase 2: Enable LOAD DATA and load data
--- ================================================================
+
+# Step 2: Enable LOAD DATA and load data
+
 
 SET GLOBAL local_infile = 1;
 
--- Step 1: Load parameter descriptions
-LOAD DATA LOCAL INFILE 'C:/Users/SamanthaTu/Downloads/Data/IMPC_parameter_description_cleaned.csv'
+# A) Load parameter descriptions
+
+LOAD DATA LOCAL INFILE '/scratch/grp/msc_appbio/Group11/data/IMPC_parameter_description_cleaned.csv'
 INTO TABLE parameter_descriptions
 FIELDS TERMINATED BY "," 
 OPTIONALLY ENCLOSED BY '"'
@@ -107,10 +112,10 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (impc_parameter_orig_id, name, description, parameter_id);
 
-SELECT COUNT(*) AS n_parameter_descriptions FROM parameter_descriptions;
 
--- Step 2: Load procedure information
-LOAD DATA LOCAL INFILE 'C:/Users/SamanthaTu/Downloads/Data/IMPC_procedure_cleaned.csv'
+## B) Load procedure information
+
+LOAD DATA LOCAL INFILE '/scratch/grp/msc_appbio/Group11/data/IMPC_procedure_cleaned.csv'
 INTO TABLE procedures
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -118,19 +123,19 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (procedure_name, description, is_mandatory, impc_parameter_orig_id);
 
-SELECT COUNT(*) AS n_procedures_raw FROM procedures;
 
--- Step 3: Load raw experimental data
-LOAD DATA LOCAL INFILE 'C:/Users/SamanthaTu/Downloads/Data/qc_result_all.csv'
+# C) Load raw experimental DATA
+
+LOAD DATA LOCAL INFILE '/scratch/grp/msc_appbio/DCDM/Group11/data/RawData_QC/qc_result_all.csv'
 INTO TABLE staging_raw
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-SELECT COUNT(*) AS n_staging_raw FROM staging_raw;
 
--- Step 4: Clean gene IDs in staging_raw
+# D) Clean gene IDs in staging_raw
+
 ALTER TABLE staging_raw
     ADD COLUMN clean_gene_id VARCHAR(50);
 
@@ -145,7 +150,8 @@ SET clean_gene_id = UPPER(
     )
 );
 
--- Step 5: Insert gene data
+# E) Insert gene DATA
+
 INSERT IGNORE INTO genes (gene_accession_id, gene_symbol)
 SELECT
     clean_gene_id,
@@ -155,18 +161,19 @@ WHERE clean_gene_id IS NOT NULL
   AND clean_gene_id <> ''
 GROUP BY clean_gene_id;
 
-SELECT COUNT(*) AS n_genes FROM genes;
 
--- Step 6: Clean parameter IDs (enhanced version: clean all special characters)
+# F) Clean parameter IDs (enhanced version: clean all special characters)
+
 UPDATE parameter_descriptions
 SET parameter_id = UPPER(TRIM(REPLACE(REPLACE(REPLACE(parameter_id, '\r', ''), '\n', ''), '\t', ''))),
     impc_parameter_orig_id = UPPER(TRIM(REPLACE(REPLACE(REPLACE(impc_parameter_orig_id, '\r', ''), '\n', ''), '\t', '')));
 
--- ✅ Clean impc_parameter_orig_id in procedures (enhanced version)
+## Clean impc_parameter_orig_id in procedures (enhanced version)
 UPDATE procedures
 SET impc_parameter_orig_id = UPPER(TRIM(REPLACE(REPLACE(REPLACE(impc_parameter_orig_id, '\r', ''), '\n', ''), '\t', '')));
 
--- Step 7: Insert parameter data
+# G) Insert parameter DATA
+
 INSERT INTO parameters (parameter_id, parameter_name)
 SELECT parameter_id, parameter_name
 FROM (
@@ -188,16 +195,17 @@ FROM (
 ) combined
 ON DUPLICATE KEY UPDATE parameter_name = VALUES(parameter_name);
 
-SELECT COUNT(*) AS n_parameters FROM parameters;
 
--- Step 8: Create parameter_prefix and classify groups
+## H) Create parameter_prefix and classify groups
+
 ALTER TABLE parameters
     ADD COLUMN prefix VARCHAR(20);
 
 UPDATE parameters
 SET prefix = SUBSTRING_INDEX(parameter_id, '_', 2);
 
--- Step 9: Insert parameter groups
+# I) Insert parameter groups
+
 INSERT INTO parameter_groups (group_name, parameter_id)
 SELECT 
     CASE
@@ -291,8 +299,9 @@ SELECT
     parameter_id
 FROM parameters;
 
--- Step 10: Load disease information
-LOAD DATA LOCAL INFILE 'C:/Users/SamanthaTu/Downloads/Data/cleaned_disease_table.csv'
+# J) Load disease information
+
+LOAD DATA LOCAL INFILE '/scratch/grp/msc_appbio/DCDM/Group11/data/cleaned_disease_table.csv'
 INTO TABLE diseases
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -300,19 +309,17 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (disease_id, disease_name, omim_id, gene_accession_id);
 
-SELECT COUNT(*) AS n_diseases_raw FROM diseases;
 
--- ✅ Modification 1: Keep all disease data even if gene is not in genes table
--- (Comment out this DELETE if you don't need foreign key constraints)
+## Modification 1: Keep all disease data even if gene is not in genes TABLE
+
 DELETE d
 FROM diseases d
 LEFT JOIN genes g ON d.gene_accession_id = g.gene_accession_id
 WHERE d.gene_accession_id IS NOT NULL
   AND g.gene_accession_id IS NULL;
 
-SELECT COUNT(*) AS n_diseases_cleaned FROM diseases;
 
--- Step 11: Insert experimental results
+K)  Insert experimental results
 INSERT INTO results (
     analysis_id,
     gene_accession_id,
@@ -340,13 +347,10 @@ FROM staging_raw
 WHERE analysis_id IS NOT NULL
   AND pvalue > 0;
 
-SELECT COUNT(*) AS n_results FROM results;
 
--- ================================================================
--- Phase 3: Complete data validation and diagnostics
--- ================================================================
+# STEP 3: Complete data validation and diagnostics
 
-SELECT '════════ Data Statistics ════════' as info;
+
 
 SELECT 'genes' as table_name, COUNT(*) as count FROM genes
 UNION ALL
@@ -362,7 +366,6 @@ SELECT 'diseases', COUNT(*) FROM diseases
 UNION ALL
 SELECT 'parameter_groups', COUNT(*) FROM parameter_groups;
 
-SELECT '════════ Connection Diagnostics ════════' as info;
 
 SELECT 
     'procedures total' as type,
@@ -380,9 +383,9 @@ SELECT
 FROM procedures pr
 INNER JOIN parameter_descriptions pd ON pr.impc_parameter_orig_id = pd.impc_parameter_orig_id;
 
--- ================================================================
--- Phase 4: Add foreign keys (modified for LEFT JOIN compatibility)
--- ================================================================
+
+# STEP 4: Add foreign keys (modified for LEFT JOIN compatibility)
+
 
 ALTER TABLE results
 ADD CONSTRAINT fk_results_genes FOREIGN KEY (gene_accession_id) REFERENCES genes(gene_accession_id),
@@ -401,20 +404,18 @@ ALTER TABLE procedures
 ADD CONSTRAINT fk_procedures_pd FOREIGN KEY (impc_parameter_orig_id) 
 REFERENCES parameter_descriptions(impc_parameter_orig_id) ON DELETE CASCADE;
 
-SELECT 'Foreign keys added successfully!' as status;
 
--- ================================================================
--- Phase 5: Query Section - Analysis of Target Genes
--- ================================================================
+# STEP 5: Query Section - Analysis of Target Genes
 
--- Query 1: Gene accession IDs of the 4 target genes
--- Outputs the gene accession ID associated with each query gene
+# Query 1: Gene accession IDs of the 4 target genes
+# Outputs the gene accession ID associated with each query gene
 SELECT *
 FROM genes
 WHERE gene_symbol IN ('Plk5', 'Col28a1', 'Dok7', 'Slfn5');
 
--- Query 2: Gene-phenotype associations with p-values
--- Retrieves the 4 target genes and shows how significant each gene-phenotype association is
+## Query 2: Gene-phenotype associations with p-values
+# Retrieves the 4 target genes and shows how significant each gene-phenotype association IS
+
 SELECT
     g.gene_symbol,
     r.parameter_id,
@@ -426,9 +427,10 @@ JOIN parameters p USING (parameter_id)
 WHERE g.gene_symbol IN ('Plk5', 'Col28a1', 'Dok7', 'Slfn5')
 ORDER BY g.gene_symbol, r.pvalue ASC;
 
--- Query 3: Significant phenotype-gene associations (p-value < 0.05)
--- Shows the most significant (p-value < 0.05) phenotype-gene associations with each query gene
--- Note: Slfn5 and Plk5 do not have any significant associations with any phenotype
+# Query 3: Significant phenotype-gene associations (p-value < 0.05)
+# Shows the most significant (p-value < 0.05) phenotype-gene associations with each query gene
+# Slfn5 and Plk5 do not have any significant associations with any phenotype
+
 SELECT 
     g.gene_symbol,
     p.parameter_name,
@@ -440,8 +442,9 @@ WHERE g.gene_symbol IN ('Plk5','Col28a1','Dok7','Slfn5')
   AND r.pvalue < 0.05
 ORDER BY g.gene_symbol, r.pvalue ASC;
 
--- Query 4: Significant associations with parameter groupings
--- Shows the most significant (p-value < 0.05) phenotype-gene associations as well as parameter group classification
+# Query 4: Significant associations with parameter groupings
+# Shows the most significant (p-value < 0.05) phenotype-gene associations as well as parameter group classification
+
 SELECT 
     g.gene_symbol,
     pg.group_name,
@@ -455,9 +458,10 @@ WHERE g.gene_symbol IN ('Plk5','Col28a1','Dok7','Slfn5')
   AND r.pvalue < 0.05
 ORDER BY g.gene_symbol, pg.group_name, r.pvalue;
 
--- Query 5: Genes in specific parameter groupings
--- Shows which of the query genes occur in required parameter groupings: Brain, Image and Weight
--- Note: Only Plk5 and Slfn5 have these parameter groupings
+# Query 5: Genes in specific parameter groupings
+# Shows which of the query genes occur in required parameter groupings: Brain, Image and Weight
+# Note: Only Plk5 and Slfn5 have these parameter groupings
+
 SELECT 
     g.gene_symbol,
     pg.group_name,
@@ -470,11 +474,12 @@ WHERE g.gene_symbol IN ('Plk5','Col28a1','Dok7','Slfn5')
 GROUP BY g.gene_symbol, pg.group_name
 ORDER BY g.gene_symbol, pg.group_name;
 
--- ================================================================
--- Phase 6: Full Metadata Queries for Target Genes
--- ================================================================
 
--- Query 6: Full metadata of gene Plk5
+# STEP 6: Full Metadata Queries for Target Genes
+
+
+# QUERY  6: Full metadata of gene Plk5
+
 SELECT 
     g.gene_symbol,
     r.gene_accession_id,
@@ -497,7 +502,8 @@ LEFT JOIN diseases d USING (gene_accession_id)
 WHERE g.gene_symbol = 'Plk5'
 ORDER BY r.pvalue ASC;
 
--- Query 7: Full metadata of gene Col28a1
+# QUERY 7: Full metadata of gene Col28a1
+
 SELECT 
     g.gene_symbol,
     r.gene_accession_id,
@@ -520,7 +526,8 @@ LEFT JOIN diseases d USING (gene_accession_id)
 WHERE g.gene_symbol = 'Col28a1'
 ORDER BY r.pvalue ASC;
 
--- Query 8: Full metadata of gene Dok7
+# Query 8: Full metadata of gene Dok7
+
 SELECT 
     g.gene_symbol,
     r.gene_accession_id,
@@ -543,7 +550,7 @@ LEFT JOIN diseases d USING (gene_accession_id)
 WHERE g.gene_symbol = 'Dok7'
 ORDER BY r.pvalue ASC;
 
--- Query 9: Full metadata of gene Slfn5
+# Query 9: Full metadata of gene Slfn5
 SELECT 
     g.gene_symbol,
     r.gene_accession_id,
@@ -567,7 +574,3 @@ LEFT JOIN diseases d USING (gene_accession_id)
 WHERE g.gene_symbol = 'Slfn5'
 ORDER BY r.pvalue ASC;
 
-select parameters.parameter_id from impc_db.parameters where parameters.parameter_id like "%IMPC_ABR_001_001%"
-
-
-select pd.parameter_id from impc_db.parameter_descriptions pd  where pd.parameter_id like "%IMPC_ABR_001_001%"
