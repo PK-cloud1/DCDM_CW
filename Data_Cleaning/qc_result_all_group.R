@@ -9,7 +9,7 @@ OUT_MAP   <- "/scratch/grp/msc_appbio/DCDM/Group11/data/qc_result_all_group_mapp
 
 df <- read_csv(DATA_PATH, show_col_types = FALSE)
 
-# 簡單拆 IMPC 三碼（不區分大小寫，向量化版本）
+# Simple parsing of IMPC three-letter codes (case-insensitive, vectorized version)
 parse_code3 <- function(pid) {
   sapply(pid, function(p) {
     p <- as.character(p)
@@ -22,24 +22,24 @@ parse_code3 <- function(pid) {
   }, USE.NAMES = FALSE)
 }
 
-# 提取非 IMPC 的「中心_模組」前綴（統一轉大寫，向量化版本）
+# Extract non‑IMPC ‘center_module’ prefixes (convert to uppercase, vectorized version)
 extract_prefix <- function(pid) {
   sapply(pid, function(p) {
     p_upper <- toupper(as.character(p))
-    # 匹配各種格式：M-G-P_XXX, HRWLLA_XXX, 等
+    # Match various formats: M-G-P_XXX, HRWLLA_XXX, etc.
     m <- str_match(p_upper, "^([A-Z\\-]+_[A-Z0-9]{3})_")[,2]
     return(ifelse(is.na(m), NA_character_, m))
   }, USE.NAMES = FALSE)
 }
 
-# 創建基礎欄位並進行解析
+# Create basic fields and perform parsing
 df1 <- df %>% mutate(
   parameter_id_raw = parameter_id,
   code3 = parse_code3(parameter_id),
   param_prefix = extract_prefix(parameter_id)
 )
 
-# IMPC 三碼字典（新增 FOR, GEP, GPO, HWT, IMM）
+# IMPC three-letter code dictionary (added FOR, GEP, GPO, HWT, IMM)
 code_map <- c(
   # Behavior/Neuro
   FEA = "Behavior/Fear conditioning",
@@ -79,15 +79,15 @@ code_map <- c(
   # Gene expression / Pathology
   GEP = "Gene expression/Pathology",
   GPO = "Gross pathology/Organ",
-  FOR = "Behavior/Neuro"              # 假設是 forced swim 或類似行為測試
+  FOR = "Behavior/Neuro"              # Assumed to be forced swim or similar behavioral test
 )
 
-# 非 IMPC 前綴對應表（新增所有剩餘代碼）
+# Non‑IMPC prefix mapping table (added all remaining codes)
 prefix_map <- c(
   "ICS_FEA" = "Behavior/Fear conditioning",
   "CCP_LFO" = "Growth/Weight",
   "CCP_XRY" = "Skeletal/X-ray",
-  # ESLIM 數字系列
+  # ESLIM numeric series
   "ESLIM_005" = "Growth/Body composition",
   "ESLIM_009" = "Neuromuscular/Grip strength",
   "ESLIM_012" = "Behavior/Neuro",
@@ -95,30 +95,30 @@ prefix_map <- c(
   "ESLIM_016" = "Hematology/Erythrocyte",
   "ESLIM_021" = "Metabolic/Lipid",
   "ESLIM_022" = "Growth/Body composition",
-  # M-G-P 系列
+  # M-G-P series
   "M-G-P_005" = "Skeletal/Bone",
   "M-G-P_013" = "Eye/Vision",
   "M-G-P_016" = "Hematology/Platelets",
-  # JAX 系列
+  # JAX series
   "JAX_LDT" = "Behavior/Anxiety (Light–Dark)",
   "JAX_OFD" = "Behavior/Open-field",
   "JAX_SLW" = "Behavior/Sleep",
-  # KMPCLA 系列
+  # KMPCLA series
   "KMPCLA_CSD" = "Behavior/Startle",
   "KMPCLA_HEM" = "Hematology",
   "KMPCLA_OFD" = "Behavior/Open-field",
-  # MGP 系列
+  # MGP series
   "MGP_CSD" = "Behavior/Startle",
   "MGP_PBI" = "Behavior/Pre-pulse inhibition",
-  # RBRCLA 系列
+  # RBRCLA series
   "RBRCLA_HEM" = "Hematology",
-  # UCDLA 系列
+  # UCDLA series
   "UCDLA_IPG" = "Metabolic/Glucose tolerance",
-  # HRWLLA 系列
+  # HRWLLA series
   "HRWLLA_GRS" = "Neuromuscular/Grip strength"
 )
 
-# Parameter 名稱自動分類
+# Automatic classification of parameter names
 param_name_to_group <- function(name) {
   name <- tolower(name)
   case_when(
@@ -138,7 +138,7 @@ param_name_to_group <- function(name) {
   )
 }
 
-# 進行分類
+# Perform classification
 df1 <- df1 %>%
   mutate(
     group_from_prefix = unname(prefix_map[param_prefix]),
