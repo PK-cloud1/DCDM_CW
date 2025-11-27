@@ -208,7 +208,7 @@ find_optimal_clusters <- function(dist_mat, max_k = 10) {
   return(best_k)
 }
 # cleaned data for first two visualisations has been defined as the variable mouse_data
-mouse_data <- read.csv("/scratch/grp/msc_appbio/DCDM/Group11/QC/qc_result_all.csv", 
+mouse_data <- read.csv("/scratch/grp/msc_appbio/DCDM/Group11/data/RawData_QC//qc_result_all.csv", 
                       stringsAsFactors = FALSE, # Prevent automatic factor conversion
                        check.names = FALSE)  %>% # Preserve original column names
   #the below command converts all values within the respective columns (gene_symbol,parameter_name) into upper case values
